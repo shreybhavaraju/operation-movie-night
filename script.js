@@ -54,7 +54,7 @@
     { t: "> encrypted uplink ......... OK", c: "sys" },
     { t: "> biometric scan: googly eyes detected  ✓" },
     { t: "> clearance level: BANANA (highest)", c: "hot" },
-    { t: "> addressee verified: AGENT MADS", c: "hot" },
+    { t: "> addressee verified: AGENT MADDY", c: "hot" },
     { t: "> UNLOCKING VAULT ...", c: "hot" },
   ];
 
@@ -185,7 +185,7 @@
   const yesBtn = document.getElementById("yesBtn");
   const noBtn = document.getElementById("noBtn");
   const choices = document.getElementById("choices");
-  const pleas = ["no", "you sure?", "think again", "reconsider!", "but the monsters!", "Mads pls", "bello?", "final answer?", "🥺", "wrong button"];
+  const pleas = ["no", "you sure?", "think again", "reconsider!", "but the monsters!", "Maddy pls", "bello?", "final answer?", "🥺", "wrong button"];
   let dodges = 0;
 
   function dodge() {

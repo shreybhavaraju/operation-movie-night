@@ -12,10 +12,10 @@
   --edge-soft: #2C261D;
 
   /* the henchmen */
-  --yellow:      #FFD60A;
-  --yellow-deep: #E9B500;
-  --blue:        #2A5CAA;
-  --blue-light:  #5B8AD6;
+  --yellow:      #FFE135;
+  --yellow-deep: #F2C500;
+  --blue:        #3B76DB;
+  --blue-light:  #6FA4F2;
   --hazard:      #F25C05;
 
   /* signal */
@@ -158,9 +158,9 @@ body {
   padding: 15px 26px; border-radius: 13px;
   color: #171208; background: var(--yellow);
   transition: transform .18s var(--ease), box-shadow .18s var(--ease), background .18s;
-  box-shadow: 0 10px 26px -10px rgba(255,214,10,.55), inset 0 -3px 0 rgba(0,0,0,.14);
+  box-shadow: 0 10px 26px -10px rgba(255,225,53,.55), inset 0 -3px 0 rgba(0,0,0,.14);
 }
-.btn:hover { transform: translateY(-2px); box-shadow: 0 16px 34px -12px rgba(255,214,10,.7), inset 0 -3px 0 rgba(0,0,0,.14); }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 16px 34px -12px rgba(255,225,53,.7), inset 0 -3px 0 rgba(0,0,0,.14); }
 .btn:active { transform: translateY(0); }
 .btn:focus-visible { outline: 3px solid var(--blue-light); outline-offset: 3px; }
 .btn--primary { align-self: flex-start; margin-top: 4px; }
@@ -171,7 +171,7 @@ body {
   border: 1px solid var(--edge); box-shadow: none;
   position: relative;
 }
-.btn--ghost:hover { background: rgba(255,214,10,.08); box-shadow: none; transform: translateY(-1px); }
+.btn--ghost:hover { background: rgba(255,225,53,.08); box-shadow: none; transform: translateY(-1px); }
 .btn__pulse {
   display: inline-block; width: 8px; height: 8px; border-radius: 50%;
   background: var(--green); margin-right: 8px; vertical-align: middle;
@@ -260,7 +260,7 @@ body {
 /* ── objective ───────────────────────────────────────────── */
 .objective {
   width: 100%; border: 1px solid var(--yellow-deep); border-radius: 14px;
-  background: linear-gradient(180deg, rgba(255,214,10,.07), rgba(255,214,10,.02));
+  background: linear-gradient(180deg, rgba(255,225,53,.07), rgba(255,225,53,.02));
   padding: 6px; overflow: hidden;
 }
 .objective__tag {

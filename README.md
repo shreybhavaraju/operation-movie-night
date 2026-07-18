@@ -1,15 +1,15 @@
 # Operation: Movie Night 🍌
 
-A top-secret, Minions-themed briefing that recruits **Agent Mads** for one final mission:
+A top-secret, Minions-themed briefing that recruits **Agent Maddy** for one final mission:
 watch *Minions & Monsters* (2026) with Agent Shrey tonight at 10:00 PM.
 
-Built to celebrate Mads passing her **NREMT** — officially a certified, real-life life-saver. 🚑
+Built to celebrate Maddy passing her **NREMT** — officially a certified, real-life life-saver. 🚑
 
 ## The flow
 
 1. **Boot** — a secure terminal boots up and unlocks the vault.
-2. **Recruitment** — a priority transmission, for Agent Mads only.
-3. **Situation** — Hollywood has a monster problem (per the film).
+2. **Recruitment** — a priority transmission, for Agent Maddy only.
+3. **Situation** — Rancho Cucamonga has a monster problem. Details: [REDACTED].
 4. **Escalation** — the Minions are, predictably, not qualified.
 5. **Why you** — the National Registry scan finds exactly one match.
 6. **Objective** — the mission decrypts: tonight, 10 PM, co-op, virtual.
