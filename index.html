@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Operation: Movie Night — CLASSIFIED</title>
+  <meta name="description" content="A top-secret transmission for Agent Mads." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23FFD60A'/><circle cx='50' cy='46' r='22' fill='%23fff' stroke='%23241F18' stroke-width='6'/><circle cx='50' cy='46' r='9' fill='%23241F18'/></svg>" />
+</head>
+<body>
+  <!-- ambient lair backdrop -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <!-- mission progress -->
+  <div class="hud" id="hud" hidden>
+    <span class="hud__label">MISSION PROGRESS</span>
+    <div class="hud__track"><div class="hud__fill" id="hudFill"></div></div>
+    <span class="hud__step" id="hudStep">01 / 06</span>
+  </div>
+
+  <main class="stage">
+
+    <!-- ═══════════ SCREEN 0 · BOOT ═══════════ -->
+    <section class="screen screen--boot is-active" data-screen="boot" aria-label="Secure terminal boot">
+      <div class="boot">
+        <div class="boot__dial" aria-hidden="true">
+          <svg viewBox="0 0 120 120" class="dial">
+            <circle cx="60" cy="60" r="54" class="dial__ring" />
+            <g class="dial__ticks">
+              <line x1="60" y1="8" x2="60" y2="18" /><line x1="60" y1="102" x2="60" y2="112" />
+              <line x1="8" y1="60" x2="18" y2="60" /><line x1="102" y1="60" x2="112" y2="60" />
+            </g>
+            <circle cx="60" cy="60" r="34" class="dial__inner" />
+            <g class="dial__spinner"><rect x="57" y="26" width="6" height="20" rx="3" /></g>
+            <circle cx="60" cy="60" r="6" class="dial__hub" />
+          </svg>
+        </div>
+        <pre class="boot__log" id="bootLog" aria-live="polite"></pre>
+        <button class="btn btn--ghost boot__go" id="bootGo" hidden>
+          <span class="btn__pulse"></span> ACCESS TRANSMISSION →
+        </button>
+      </div>
+    </section>
+
+    <!-- ═══════════ SCREEN 1 · RECRUITMENT ═══════════ -->
+    <section class="screen" data-screen="recruit" aria-label="Incoming transmission">
+      <div class="panel reveal">
+        <div class="tape tape--tl">TOP&nbsp;SECRET</div>
+        <div class="minion" data-track>
+          <svg viewBox="0 0 200 260" class="minion__svg" role="img" aria-label="A Minion holding up a message">
+            <ellipse cx="100" cy="248" rx="52" ry="9" fill="#000" opacity=".28"/>
+            <rect x="46" y="40" width="108" height="196" rx="54" fill="#FFD60A"/>
+            <rect x="46" y="150" width="108" height="86" rx="20" fill="#2A5CAA"/>
+            <rect x="66" y="150" width="10" height="40" fill="#22508F"/>
+            <rect x="124" y="150" width="10" height="40" fill="#22508F"/>
+            <circle cx="100" cy="176" r="4" fill="#22508F"/>
+            <rect x="42" y="86" width="116" height="12" fill="#3A3125"/>
+            <g class="eye" data-eye>
+              <circle cx="100" cy="92" r="30" fill="#EDE9DE" stroke="#3A3125" stroke-width="7"/>
+              <circle class="pupil" cx="100" cy="92" r="12" fill="#5B4B3A"/>
+              <circle class="pupil-dot" cx="104" cy="88" r="3.5" fill="#fff"/>
+              <path class="lid" d="M70 92a30 30 0 0 1 60 0z" fill="#FFD60A" opacity="0"/>
+            </g>
+            <path d="M84 128q16 12 32 0" stroke="#3A3125" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <rect x="20" y="150" width="18" height="60" rx="9" fill="#FFD60A"/>
+            <rect x="162" y="150" width="18" height="60" rx="9" fill="#FFD60A"/>
+          </svg>
+        </div>
+        <p class="eyebrow eyebrow--alert">◍ &nbsp;INCOMING PRIORITY TRANSMISSION</p>
+        <h1 class="headline">For the eyes of<br /><span class="hl">Agent Mads</span> only.</h1>
+        <p class="lede">Codename <b>Mads</b>. Clearance: <b>Banana</b>. We wouldn't wake you at this hour unless the world genuinely needed you. It does. Again.</p>
+        <button class="btn btn--primary" data-next>OPEN TRANSMISSION →</button>
+      </div>
+    </section>
+
+    <!-- ═══════════ SCREEN 2 · SITUATION ═══════════ -->
+    <section class="screen" data-screen="situation" aria-label="Situation report">
+      <div class="panel reveal">
+        <div class="dossier">
+          <div class="dossier__head">
+            <span>SITUATION REPORT</span><span class="blink">● REC</span>
+          </div>
+          <div class="dossier__body">
+            <p><span class="k">LOCATION:</span> Hollywood, California</p>
+            <p><span class="k">STATUS:</span> <span class="bad">critical</span></p>
+            <p><span class="k">SUMMARY:</span> Hollywood has a monster problem.</p>
+            <hr />
+            <p>The Minions became famous. Naturally, this went to their heads and — <em>somehow</em> — they released actual monsters onto the world.</p>
+            <p class="quote">"This is fine. This is completely fine."<br /><span>— Bob, moments before it was not fine</span></p>
+          </div>
+        </div>
+        <button class="btn btn--primary" data-next>...and? →</button>
+      </div>
+    </section>
+
+    <!-- ═══════════ SCREEN 3 · ESCALATION ═══════════ -->
+    <section class="screen" data-screen="escalate" aria-label="Threat escalation">
+      <div class="panel reveal">
+        <div class="tape tape--tr tape--hazard">⚠ THREAT RISING</div>
+        <p class="eyebrow eyebrow--alert">◍ &nbsp;THREAT ASSESSMENT</p>
+        <h2 class="headline headline--sm">The monsters are loose.<br />The Minions are, predictably, <span class="hl-orange">not qualified.</span></h2>
+        <p class="lede">Command has reviewed the roster. Kevin panics. Stuart eats the evidence. Bob is emotionally supportive but medically useless.</p>
+        <p class="lede lede--strong">We need someone with <b>actual credentials</b>. Someone who stays calm when everyone else is screaming. Someone who can look at a catastrophe and know exactly what to do.</p>
+        <p class="lede">Someone... <span class="hl">certified.</span></p>
+        <button class="btn btn--primary" data-next>Scan the database →</button>
+      </div>
+    </section>
+
+    <!-- ═══════════ SCREEN 4 · WHY YOU ═══════════ -->
+    <section class="screen" data-screen="whyyou" aria-label="Operative identified">
+      <div class="panel reveal">
+        <p class="eyebrow" id="scanLine">◍ &nbsp;SCANNING NATIONAL REGISTRY FOR QUALIFIED PERSONNEL...</p>
+
+        <div class="idcard" id="idcard" hidden>
+          <div class="idcard__strip">NREMT · CERTIFIED FIRST RESPONDER <span class="cross">✚</span></div>
+          <div class="idcard__row">
+            <div class="idcard__photo" data-track>
+              <svg viewBox="0 0 120 120" class="minion__svg" aria-hidden="true">
+                <rect x="26" y="14" width="68" height="96" rx="34" fill="#FFD60A"/>
+                <rect x="24" y="46" width="72" height="8" fill="#3A3125"/>
+                <g class="eye" data-eye>
+                  <circle cx="60" cy="50" r="18" fill="#EDE9DE" stroke="#3A3125" stroke-width="4.5"/>
+                  <circle class="pupil" cx="60" cy="50" r="7" fill="#5B4B3A"/>
+                  <circle class="pupil-dot" cx="62.5" cy="47.5" r="2" fill="#fff"/>
+                </g>
+                <path d="M50 76q10 8 20 0" stroke="#3A3125" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                <rect x="26" y="92" width="68" height="18" rx="8" fill="#2A5CAA"/>
+              </svg>
+            </div>
+            <div class="idcard__meta">
+              <p class="idcard__name">AGENT MADS</p>
+              <p class="idcard__cred"><span class="ok">✓</span> NREMT — <b>PASSED</b></p>
+              <p class="idcard__cred"><span class="ok">✓</span> Officially licensed to save lives</p>
+              <p class="idcard__cred"><span class="ok">✓</span> Verified: it's real, we checked twice</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="whyText" hidden>
+          <h2 class="headline headline--sm">Match found. <span class="hl">It's you.</span></h2>
+          <p class="lede">While the Minions <em>cause</em> the disasters, you're the one trained to walk in and fix them. You passed the <b>NREMT</b> — you can keep a total stranger's heart beating <em>and</em> put up with mine, which is frankly the harder certification.</p>
+          <p class="lede">The world got a little safer the day you got that cert, Mads. Also: someone who stays that calm under pressure and still finds time to be that funny? Command has never seen those stats on one operative before.</p>
+          <p class="lede lede--muted">Congratulations, for real. We're all a bit in awe of you. Now — one final assignment.</p>
+          <button class="btn btn--primary" data-next>Accept the debrief →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SCREEN 5 · OBJECTIVE ═══════════ -->
+    <section class="screen" data-screen="objective" aria-label="Mission objective">
+      <div class="panel reveal">
+        <p class="eyebrow" id="decryptLine">◍ &nbsp;DECRYPTING MISSION OBJECTIVE...</p>
+        <div class="objective" id="objectiveCard" hidden>
+          <div class="objective__tag">OBJECTIVE · CLASSIFIED</div>
+          <div class="objective__grid">
+            <div><span class="k">WHEN</span><b>Tonight · 10:00 PM your time</b></div>
+            <div><span class="k">WHERE</span><b>Wherever you are ↔ wherever I am</b></div>
+            <div><span class="k">MODE</span><b>Co-op · virtual · just us two</b></div>
+            <div><span class="k">TARGET</span><b>MINIONS &amp; MONSTERS (2026)</b></div>
+          </div>
+          <p class="objective__note">Hollywood has a monster problem. We, conveniently, have a movie-night solution. Snacks are a strategic resource — stock accordingly.</p>
+        </div>
+        <button class="btn btn--primary" id="toAsk" hidden data-next>View final orders →</button>
+      </div>
+    </section>
+
+    <!-- ═══════════ SCREEN 6 · THE ASK ═══════════ -->
+    <section class="screen" data-screen="ask" aria-label="The question">
+      <div class="panel panel--ask reveal">
+        <div class="minion minion--big" data-track>
+          <svg viewBox="0 0 200 240" class="minion__svg" role="img" aria-label="A hopeful Minion awaiting your answer">
+            <ellipse cx="100" cy="228" rx="50" ry="8" fill="#000" opacity=".28"/>
+            <rect x="48" y="26" width="104" height="188" rx="52" fill="#FFD60A"/>
+            <rect x="48" y="146" width="104" height="68" rx="18" fill="#2A5CAA"/>
+            <rect x="48" y="146" width="104" height="15" fill="#2A5CAA"/>
+            <rect x="40" y="72" width="120" height="12" fill="#3A3125"/>
+            <g class="eye" data-eye>
+              <circle cx="100" cy="78" r="31" fill="#EDE9DE" stroke="#3A3125" stroke-width="7"/>
+              <circle class="pupil" cx="100" cy="78" r="12" fill="#5B4B3A"/>
+              <circle class="pupil-dot" cx="104" cy="74" r="3.5" fill="#fff"/>
+            </g>
+            <path d="M82 116q18 16 36 0" stroke="#3A3125" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <ellipse cx="72" cy="118" rx="7" ry="5" fill="#F5A9B8" opacity=".55"/>
+            <ellipse cx="128" cy="118" rx="7" ry="5" fill="#F5A9B8" opacity=".55"/>
+          </svg>
+        </div>
+        <h2 class="headline">Agent Mads —<br />do you accept<br />the mission?</h2>
+        <p class="lede lede--muted">(translation: movie night with me, tonight, 10pm your time)</p>
+        <div class="choices" id="choices">
+          <button class="btn btn--yes" id="yesBtn">YES — I'm in 🍌</button>
+          <button class="btn btn--no" id="noBtn">no</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SCREEN 7 · ACCEPTED ═══════════ -->
+    <section class="screen" data-screen="accepted" aria-label="Mission accepted">
+      <div class="panel panel--win reveal">
+        <div class="stamp">MISSION<br/>ACCEPTED</div>
+        <h2 class="headline">BELLO! <span class="hl">See you at 10.</span></h2>
+        <p class="lede">The monsters don't stand a chance against the two of us and a certified EMT. Get comfortable, congrats again on the cert — I'm so proud of you — and let's go save Hollywood.</p>
+        <a class="btn btn--primary btn--launch" href="https://www.cineby.at/movie/1315772" target="_blank" rel="noopener">
+          ▶ &nbsp;LAUNCH THE MISSION — open the movie
+        </a>
+        <p class="signoff">— Agent Shrey &nbsp;·&nbsp; Command 🍌❤️</p>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="confetti" id="confetti" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
